@@ -1,0 +1,211 @@
+/* Jobs */
+
+.section_jobs {
+  clear: both;
+  text-align: center;
+}
+
+.jobs_dash {
+  margin : {
+    top: 10px;
+    bottom: 50px;
+  }
+}
+
+.description {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 70px;
+  font-size: $font-size*1.6;
+  line-height: $font-size*2.3;
+}
+
+.jobs {
+  padding : {
+    top: 30px;
+    bottom: 30px;
+  }
+  &.middle {
+    background-color: $color-lighterBlack;
+    color: $color-verylightGray;
+    padding-bottom: 40px;
+    margin-bottom: 15px;
+  }
+}
+
+.jobs_grip {
+  margin: auto;
+  width: 58%;
+}
+
+.jobs {
+  h3 {
+    @include font-page($font-size*1.33, $font-weight*6);
+    line-height: $font-size*1.6;
+    text-align: left;
+  }
+  p {
+    float: left;
+    margin: -5px 0 35px 0;
+    width: 60%;
+    font-size: $font-size*1.2;
+    line-height: $font-size*1.9;
+    text-align: left;
+    transform: scaleY(1.0007);
+  }
+  ul {
+    width: 100%;
+    padding-left: 0;
+    text-align: left;
+    clear: both;
+  }
+  li {
+    color: $color-darkerRed;
+    @include font-page($font-size*0.87, $font-weight*4);
+    line-height: $font-size*1.6;
+    transform: scaleX(1.0043);
+    @include border-button(1px, #bbbbbb);
+    margin-right: 5px;
+    padding: 10px 17px;
+    width: 90px;
+    height: 35px;
+  }
+}
+
+ul {
+  &.first li {
+    padding: 10px 22px;
+  }
+  &.middle li {
+    color: $color-verylightGray;
+    padding: 10px 24px;
+  }
+}
+
+.jobs_button {
+  float: right;
+  padding: 10px 0 10px 0;
+  color: inherit;
+  background-color: inherit;
+  margin-top: 5px;
+  @include border-button(2px, $color-lighterBlack);
+  font-size: $font-size*0.93;
+  letter-spacing: 0.1em;
+  line-height: $font-size*1.6;
+  width: 20%;
+  min-width: 120px;
+  &.middle {
+    color: $color-verylightGray;
+    border-color: $color-verylightGray;
+  }
+  &:hover {
+    border-color: #ee4461;
+    box-shadow: 1px 1px 5px #ee4461;
+  }
+}
+
+.jobs_spec_button {
+  margin-top: 115px;
+}
+
+.spec_button {
+  background-color: #d7d7d7;
+  padding: 20px 20px;
+  width: 15.4%;
+  height: 50px;
+  color: #333333;
+  font-size: $font-size*0.93;
+  letter-spacing: 0.2em;
+  line-height: $font-size*1.6;
+  &:hover {
+    background-color: #e0e0e0;
+    box-shadow: 1px 1px 5px #e0e0e0;
+  }
+}
+
+/* Tablet view */
+
+@media screen and (max-width: 1024px) {
+  .description {
+    width: 70%;
+  }
+  .jobs.middle {
+    margin : {
+      top: 30px;
+      bottom: 25px;
+    }
+  }
+  .jobs_grip {
+    width: 82%;
+  }
+  .jobs_spec_button {
+    margin-top: 80px;
+  }
+}
+
+/* Portrait tablets view, etc. */
+
+@media screen and (max-width: 640px) {
+  .jobs_dash {
+    margin-bottom: 30px;
+  }
+  .description {
+    width: 85%;
+    font-size: $font-size*1.33;
+    line-height: $font-size*2;
+  }
+  .jobs {
+    background-color: #f8f7f5;
+    padding : {
+      top: 10px;
+      bottom: 20px;
+    }
+    &.middle {
+      color: $color-lighterBlack;
+      background-color: #ffffff;
+      margin: 0;
+      padding-bottom: 20px;
+    }
+  }
+  .jobs_grip {
+    width: 90%;
+  }
+  .jobs {
+    h3 {
+      @include font-page($font-size*1.2, $font-weight*6);
+      line-height: $font-size*1.6;
+    }
+    p {
+      margin: -5px 0 15px 0;
+      width: 100%;
+      font-size: $font-size;
+      line-height: $font-size*1.33;
+    }
+    li {
+      color: $color-darkerRed;
+      border: none;
+      @include font-page($font-size*0.93, $font-weight*3);
+      line-height: $font-size*1.2;
+      margin: 0;
+      padding: 0 7px 0 0;
+    }
+  }
+  ul {
+    &.first li {
+      padding: 0 7px 0 0;
+    }
+    &.middle li {
+      color: $color-darkerRed;
+      padding: 0 7px 0 0;
+    }
+  }
+  .jobs_button {
+    display: none;
+  }
+  .jobs_spec_button {
+    margin : {
+      top: 90px;
+      bottom: 90px;
+    }
+  }
+}

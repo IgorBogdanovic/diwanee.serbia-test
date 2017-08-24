@@ -1,0 +1,91 @@
+/* Obligations */
+
+.section_obligations {
+  float: left;
+  text-align: center;
+  line-height: $font-size*1.6;
+}
+
+.obligations {
+  background-color: #FBFBFB;
+  height: 33.33%;
+  width: 33.33%;
+  float: left;
+  &.middle {
+    background-color: #EDEDED;
+  }
+  h3 {
+    @include font-page($font-size*1.2, $font-weight*7);
+    letter-spacing: 0.2em;
+  }
+  p {
+    font-size: $font-size*1.07;
+    width: 78%;
+    margin: 0 40px 60px 40px;
+  }
+}
+
+.sign {
+  height: 87px;
+  padding : {
+    top: 95px;
+    bottom: 10px;
+  }
+}
+
+.obligations_dash {
+  margin : {
+    top: 20px;
+    bottom: 25px;
+  }
+}
+
+/* Tablet view */
+
+@media screen and (max-width: 1024px) {
+  .sign {
+    padding-top: 45px;
+    @include scale-img(0.7);
+  }
+  .obligations_dash {
+    height: 2px;
+    @include scale-img(0.7);
+    margin : {
+      top: 5px;
+      bottom: 10px;
+    }
+  }
+  .obligations {
+    h3 {
+      font-size: $font-size*1.33;
+      margin-top: 10px;
+    }
+    p {
+      font-size: $font-size*1.13;
+      line-height: $font-size*1.8;
+      width: 85%;
+      margin: 0 25px 60px 25px;
+    }
+  }
+}
+
+/* Portrait tablets view, etc. */
+
+@media screen and (max-width: 640px) {
+  .obligations {
+    height: auto;
+    width: 100%;
+    float: left;
+  }
+  .sign {
+    padding-top: 45px;
+    @include scale-img(0.85);
+  }
+  .obligations h3 {
+    margin-top: 0;
+  }
+  .obligations_dash {
+    @include scale-img(1);
+    margin-bottom: 30px;
+  }
+}

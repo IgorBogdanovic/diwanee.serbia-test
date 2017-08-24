@@ -1,0 +1,88 @@
+// CSS import
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+// SCSS imports
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "components/nav";
+@import "layout/header";
+@import "layout/obligations";
+@import "layout/jobs";
+@import "layout/about";
+@import "layout/contacts";
+
+/* General */
+
+html {
+  font : {
+    family: "Roboto", sans-serif;
+    size: 15px;
+    weight: $font-weight*3;
+  }
+  color: $color-lighterBlack;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  background-color: #ffffff;
+}
+
+.section_intro {
+  color: #999999;
+  @include font-page($font-size*0.93, $font-weight*4);
+  padding-top: 100px;
+  letter-spacing: 0.1em;
+  line-height: $font-size*2.3;
+}
+
+.section_headers {
+  @include font-page($font-size*3.33, $font-weight*4);
+  line-height: $font-size*1.6;
+}
+
+.obligations p, .address, .bottom_contact {
+  color: $color-darkerGray;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li, .city_name {
+  display: inline;
+}
+
+a, li {
+  font-weight: $font-weight*5;
+}
+
+.nav_menu li, .nav_menu_bottom p, .banner_text h1, .banner_ptag_short, .obligations h3, .section_jobs h2, .jobs h3, .jobs_button, .spec_button, .section_about h2, .section_contacts + p, .city_name, .section_intro, .bottom_contact p {
+  text-transform: uppercase;
+}
+
+/* Tablet view */
+
+@media screen and (max-width: 1024px) {
+  .section_intro {
+    padding-top: 80px;
+  }
+}
+
+/* Portrait tablets view, etc. */
+
+@media screen and (max-width: 640px) {
+  .section_intro {
+    padding-top: 60px;
+  }
+  .section_headers {
+    @include font-page($font-size*2.66, $font-weight*6);
+  }
+}

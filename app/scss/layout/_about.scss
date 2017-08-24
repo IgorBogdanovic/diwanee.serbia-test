@@ -1,0 +1,60 @@
+/* About */
+
+.section_about {
+  background-color: #FBFBFB;
+  margin-top: 120px;
+  padding-bottom: 9%;
+  text-align: center;
+}
+
+.about_dash {
+  margin : {
+    top: 15px;
+    bottom: 50px;
+  }
+}
+
+.about_text {
+  width: 58%;
+  margin: auto;
+  font-size: $font-size*1.2;
+  line-height: $font-size*1.9;
+  text-align: left;
+}
+
+/* Tablet view */
+
+@media screen and (max-width: 1024px) {
+  .section_about {
+    margin-top: 15%;
+    padding-bottom: 12%;
+  }
+  .about_text {
+    width: 82%;
+  }
+}
+
+/* Portrait tablets view, etc. */
+
+@media screen and (max-width: 640px) {
+  .section_about h2 {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+    line-height: $font-size*2.8;
+  }
+  .about_dash {
+    margin-bottom: 35px;
+  }
+  .about_text {
+    line-height: $font-size*2;
+  }
+}
+
+/* Mobile view */
+
+@media screen and (max-width: 480px) {
+  .section_about {
+    padding-bottom: 20%;
+  }
+}

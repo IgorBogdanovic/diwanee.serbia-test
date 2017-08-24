@@ -1,0 +1,23 @@
+@mixin font-page($size: $font-size, $weight: $font-weight) {
+	font : {
+    size: $size;
+    weight: $weight;
+  }
+}
+
+@mixin scale-img($scale) {
+	-webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+    transform: scale($scale);
+}
+
+@mixin border-button($width, $color, $radius: 2px, $style: solid) {
+	border : {
+      radius: $radius;
+      width: $width;
+      color: $color;
+      style: $style;
+    }
+}

@@ -1,0 +1,135 @@
+/* Nav panel */
+
+.fixed_nav {
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  background-color: #F2EEE3;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.logo {
+  float: left;
+  margin: 32px 0 0 18.1%;
+}
+
+.menu_bar {
+  display: none;
+  float: right;
+  cursor: pointer;
+  margin: 21px 27px 0 0;
+}
+
+.nav_menu {
+  float: right;
+  margin: 15px 14.3% 0 0;
+  li {
+    margin-right: 45px;
+  }
+  a {
+    color: #000000;
+    font-size: $font-size*0.95;
+    line-height: $font-size*2.4;
+    letter-spacing: 0.05em;
+    text-align: center;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav_menu_bottom {
+  display: none;
+  margin-top: -35px;
+  p {
+    width: 48%;
+    display: inline-block;
+    text-align: left;
+    margin-left: 70px;
+    color: #cccccc;
+    font-size: $font-size*1.07;
+    line-height: $font-size*5.2;
+    letter-spacing: $font-size*0.2;
+  }
+  &.links {
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 0;
+    a {
+      &:first-child {
+        margin-right: 25px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+/* Tablet view */
+
+@media screen and (max-width: 1024px) {
+  .fixed_nav {
+    margin: 0;
+  }
+  .logo {
+    margin: 25px 0 0 55px;
+    width: 129px;
+  }
+  .menu_bar {
+    display: block;
+  }
+  .nav_menu {
+    display: none;
+    float: left;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    text-align: center;
+    opacity: 0.93;
+    z-index: 1;
+    ul {
+      margin-top: 20px;
+    }
+    li {
+      display: block;
+    }
+    a {
+      color: #cccccc;
+      font-size: $font-size*1.6;
+      line-height: $font-size*5.2;
+    }
+  }
+  .nav_menu_bottom {
+    display: block;
+  }
+}
+
+/* Portrait tablets view, etc. */
+
+@media screen and (max-width: 640px) {
+  .logo {
+    margin: 10px 0 0 16px;
+    width: 138px;
+  }
+  .nav_menu {
+    height: auto;
+    ul {
+      margin-top: 100px;
+    }
+  }
+  .nav_menu_bottom {
+    margin : {
+      top: 35px;
+      bottom: -17px;
+    }
+    p {
+      margin-left: 15px;
+    }
+    &.links {
+      margin-right: 10px;
+    }
+  }
+}

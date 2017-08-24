@@ -1,0 +1,198 @@
+/* Footer - Contact */
+
+.follow_us {
+  margin-bottom: 7%;
+  text-align: center;
+  a {
+    margin : {
+      right: 3px;
+      left: 3px;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.all_contacts {
+  float: left;
+  width: 100%;
+  padding: 10% 0 5% 0;
+  background-color: $color-lighterBlack;
+}
+
+.all_contacts_wrapper {
+  float: left;
+  position: relative;
+  left: 18%;
+  width: 64%;
+}
+
+.contact_cities {
+  float: left;
+  &.dubai {
+    width: 40%;
+  }
+  &.beirut {
+    width: 35%;
+  }
+}
+
+.city_name, .address {
+  @include font-page($weight: $font-weight*4);
+  line-height: $font-size*1.6;
+  text-align: left;
+}
+
+.city_name {
+  font-size: $font-size*1.07;
+  color: $color-verylightGray;
+  img {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+  }
+}
+
+.bottom_contact {
+  float: left;
+  width: 100%;
+  background-color: #1E1E1E;
+}
+
+.bottom_contact_wrapper {
+  float: left;
+  position: relative;
+  left: 18%;
+  width: 60%;
+  margin: 10px 0 10px 0;
+}
+
+.bottom_contact p {
+  float: left;
+  color: $color-darkerGray;
+  font-size: $font-size*0.8;
+  line-height: $font-size*1.6;
+  text-align: left;
+  &:last-of-type {
+    display: none;
+  }
+}
+
+.bottom_contact_links {
+  float: right;
+  margin-top: 1.25%;
+  img {
+    width: 21px;
+  }
+}
+
+.tweet_small {
+  margin: auto 25px;
+}
+
+.bottom_contact_links {
+  a {
+    &:last-child {
+      color: inherit;
+      font-size: $font-size*0.93;
+      text-align: left;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &.mob {
+    display: none;
+  }
+}
+
+/* Tablet view */
+
+@media screen and (max-width: 1024px) {
+  .follow_us {
+    margin-bottom: 13%;
+  }
+  .all_contacts {
+    padding: 13% 0 8% 0;
+  }
+  .all_contacts_wrapper {
+    left: 8%;
+    width: 84%;
+  }
+  .contact_cities {
+    &.dubai {
+      width: 36%;
+    }
+    &.beirut {
+      width: 35%;
+    }
+  }
+  .bottom_contact_wrapper {
+    left: 5%;
+    width: 90%;
+    margin: 10px 0 10px 0;
+  }
+}
+
+/* Portrait tablets view, etc. */
+
+@media screen and (max-width: 640px) {
+  .all_contacts_wrapper {
+    left: 35%;
+    width: 45%;
+  }
+  .contact_cities {
+    &.dubai, &.beirut, &.belgrade {
+      width: 100%;
+    }
+  }
+  .bottom_contact p {
+    &:last-of-type {
+      display: block;
+      margin: 0 0 0 33%;
+    }
+    &:first-of-type {
+      display: none;
+    }
+  }
+  .bottom_contact_links {
+    &.mob {
+      display: block;
+    }
+    display: none;
+    float: left;
+    clear: left;
+    margin: 8% 0 -4% 35%;
+    img {
+      width: initial;
+    }
+  }
+  .tweet_small {
+    margin: 0 35px 0 20px;
+  }
+  .bottom_contact_links a:last-child {
+    color: $color-darkerGray;
+    vertical-align: super;
+  }
+}
+
+/* Mobile view */
+
+@media screen and (max-width: 480px) {
+  .follow_us {
+    margin-bottom: 20%;
+  }
+  .all_contacts {
+    padding: 20% 0 8% 0;
+  }
+  .all_contacts_wrapper {
+    left: 8%;
+    width: 84%;
+  }
+  .bottom_contact p:last-of-type {
+    margin: 0 0 0 4%;
+  }
+  .bottom_contact_links {
+    margin: 10% 0 0 8%;
+  }
+}
